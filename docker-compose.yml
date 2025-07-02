@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  bot:
+    build: .
+#    env_file: .env
+    command: uv run python main.py
+    environment:
+      - BOT_TOKEN=token
+    restart: unless-stopped
