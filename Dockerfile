@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1
 
 RUN pip install uv
 RUN pip install --upgrade pip setuptools wheel importlib-metadata
-
+RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-recommends netcat
 WORKDIR /app
 
 COPY uv.lock pyproject.toml /app/
