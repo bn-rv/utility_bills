@@ -16,4 +16,4 @@ COPY . .
 
 # Запускаем бота
 CMD ["uv", "run", "python", "main.py"]
-ENTRYPOINT ["sh", "/fake_entrypoint.sh"]
+ENTRYPOINT ["sh", "fake_entrypoint.sh"]
