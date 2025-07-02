@@ -4,9 +4,6 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 RUN pip install uv
-RUN pip install --upgrade pip setuptools wheel importlib-metadata
-RUN apt-get update
-RUN apt-get install -y netcat-traditional
 
 WORKDIR /app
 
@@ -18,4 +15,3 @@ COPY . .
 
 # Запускаем бота
 CMD ["uv", "run", "python", "main.py"]
-ENTRYPOINT ["sh", "fake_entrypoint.sh"]
