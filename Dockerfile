@@ -13,5 +13,4 @@ RUN uv sync
 
 COPY . .
 
-# Запускаем бота
 CMD ["uv", "run", "python", "main.py"]
